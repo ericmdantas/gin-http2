@@ -9,7 +9,7 @@ import (
 func main() {
 		router := gin.Default()
 		
-		router.StaticFS("/client/dev", "./client/dev")
+		router.Static("/client/dev", "./client/dev")
 		
 		router.GET("/wtf", func(c *gin.Context) {
 			c.String(http.StatusOK, "Hello %s", "wtf")
